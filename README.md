@@ -1,33 +1,106 @@
-Forensic Host Triage
+Forensic Host Triage Project Write-up
 
 Overview
 
-This project demonstrates a forensically sound investigation of a compromised Windows workstation using open-source forensic tools.
+This project demonstrates a complete forensic investigation workflow for a compromised Windows host image.
 
-The objective was to preserve evidence integrity, perform disk and memory analysis, establish a timeline of attacker activity, identify persistence mechanisms, and produce a defensible findings report.
+The objective was to preserve evidence integrity, perform forensic analysis using open-source tools, identify attacker activity, and produce a report suitable for incident response review.
 
-Tools Used
 
-- Autopsy
-- Volatility 3
-- RegRipper
-- SHA256 hashing utilities
 
-Investigation Goals
+What I Built
 
-1. Preserve evidence integrity
-2. Verify forensic image hashes
-3. Analyze memory artefacts
-4. Examine Windows registry persistence
-5. Build a chronological incident timeline
-6. Produce a defensible forensic report
+The repository contains:
 
-Deliverables
-
-- Evidence acquisition log
-- Chain of custody record
-- Hash verification report
-- Registry artefact analysis
-- Memory analysis findings
-- Timeline reconstruction
+- Evidence documentation
+- Hash verification records
+- Chain-of-custody notes
+- Autopsy analysis artefacts
+- Volatility memory analysis results
+- RegRipper registry findings
 - Final forensic report
+
+
+
+Investigation Approach
+
+The investigation followed a forensic workflow:
+
+1. Evidence acquisition
+2. SHA256 integrity verification
+3. Working copy creation
+4. Timeline reconstruction
+5. Memory analysis
+6. Registry analysis
+7. Findings documentation
+
+
+
+Findings
+
+The investigation identified:
+
+- Encoded PowerShell execution
+- Suspicious command execution
+- Unauthorized user creation
+- Administrator privilege escalation
+- Registry persistence
+- External network communication
+
+The evidence was mapped using:
+
+- Windows Event IDs
+- Volatility plugins
+- Registry artefacts
+- File system analysis
+
+
+
+Tools and Techniques
+
+Autopsy was used for:
+
+- Timeline creation
+- File analysis
+
+Volatility 3 was used for:
+
+- Process analysis
+- Command line extraction
+- Network connection analysis
+
+RegRipper was used for:
+
+- Registry persistence analysis
+
+
+
+Trade-offs
+
+A full enterprise forensic investigation would normally include commercial EDR and forensic suites.
+
+This project focused on free open-source tools to demonstrate that reliable investigations can still be performed with limited resources.
+
+The main trade-off was depth of telemetry compared with enterprise tooling.
+
+
+
+Deliverable Contents
+
+The repository contains a complete investigation package that demonstrates:
+
+- Evidence preservation
+- Technical analysis
+- Incident reconstruction
+- Defensive recommendations
+
+
+
+Lessons Learned
+
+The investigation highlighted the importance of:
+
+- Monitoring PowerShell activity
+- Protecting privileged accounts
+- Detecting persistence mechanisms
+- Maintaining forensic evidence integrity
